@@ -25,9 +25,9 @@ export class ReviewsService {
     localStorage.setItem('reviews', JSON.stringify(reviews));
     return JSON.parse(localStorage.getItem('reviews'));
   }
-
+  // changed
   all(): Observable<any> {
-    return this.http.get<Review[]>(this.apiUrl + '?search=', httpOptions);
+    return this.http.get<Review[]>(this.apiUrl + '?', httpOptions);
   }
 
   create(reviewBody): Observable<any> {
